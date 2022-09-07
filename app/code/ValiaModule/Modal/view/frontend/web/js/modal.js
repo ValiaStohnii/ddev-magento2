@@ -1,27 +1,28 @@
-define(function(){
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ * 
+ * author: Valia
+ */
+
+define(['jquery'],function($){
     'use strict';
-
-    return function(){
-        const closeOverlay = document.querySelector('.overlay');
-        const closeButton = document.querySelector('.modal_btn--close');
-        const cancelButton = document.querySelector('.modal_btn--cancel');
-    
-        closeButton.addEventListener('click', closeModal);
-        cancelButton.addEventListener('click', cancleModal);
-
+    return function(){           
         if(!localStorage.getItem("modal")){
-            closeOverlay.classList.remove('is-hidden');
+            $('.overlay').removeClass('is-hidden');
         }
-
-        function cancleModal() {
-            closeOverlay.classList.add('is-hidden');    
-        }
-
-        function closeModal(){
+        /**
+         * Cancel modal
+        */
+        $('.modal_btn--cancel').click(function () {
+            $('.overlay').addClass('is-hidden');    
+        })
+        /**
+         * Close modal, add item to localStorage and don't show modal again
+        */
+        $('.modal_btn--close').click(function (){
             localStorage.setItem("modal", "open");
-            cancleModal();
-        }
-
-        
+            $('.overlay').addClass('is-hidden'); 
+        })
     }
 });

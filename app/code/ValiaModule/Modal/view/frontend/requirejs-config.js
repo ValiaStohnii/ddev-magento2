@@ -1,7 +1,7 @@
 var config = {
     map: {
         "*": {
-            alias: "ValiaModule_Modal/js/modal"
+            valia: "ValiaModule_Modal/js/modal"
         }
     }
 };
