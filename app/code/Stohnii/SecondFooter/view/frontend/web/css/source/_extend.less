@@ -57,6 +57,43 @@
                 background-color: @modal-background-color;
                 box-shadow: 10px 10px 20px @box-shadow-color;
                 border-radius: @border-radius;
+                &_content{
+                    position: relative;
+                }
+                .close_button{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    border: 1px solid #ffa500;
+                    color:#ffa500;
+                    &:hover{
+                        background-color: #ffa500;
+                        color: #fff;
+                    }
+                }
+                &_title{
+                    font-size: 30px;
+                    font-weight: 700;
+                    color: #ffa500;
+                }
+                .numbers-el{
+                    list-style: none;
+                    padding-left: 0;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+                .guess_button{
+                    background-color: #ffa500;
+                    color: #fff;
+                    border-radius: 8px;
+                    border: 1px solid #ffa500;
+                    &:hover{
+                        background-color: #fff;
+                        color: #ffa500;
+                    }
+                }
             }
         }
     }
@@ -70,12 +107,6 @@
     .second-footer{
         .click_me_button{
             display: none;
-        }
-        .game_modal_overlay{
-            .game_modal{
-                width: 285px;
-                padding: 20px 15px;
-            }
         }
     }
 }
