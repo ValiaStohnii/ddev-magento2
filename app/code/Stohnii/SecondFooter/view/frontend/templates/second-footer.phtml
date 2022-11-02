@@ -1,10 +1,10 @@
-<div class="second-footer">
-    <button class="click_me_button" type="button">Click me</button>
+<div class="second-footer" data-bind="scope: 'stohniifooter'">
+    <button class="click_me_button" type="button" data-bind="click: clickMeButton">Click me</button>
 
     <div class="game_modal_overlay is-hidden">
         <div class="game_modal">
             <div class="game_modal_content">
-                <button class="close_button" type="button">x</button>
+                <button class="close_button" type="button" data-bind="click: closeButton">x</button>
                 <p class="game_modal_title">guessing game</p>
                 <p>You need to guess a randomly generated number from 1 to 50 by entering numbers into a box and clicking a button that reads "guess"</p>
                 <input class="game_modal_input" type="text">
@@ -20,6 +20,15 @@
     {
         ".second-footer": {
             "stohnii":{}
+        },
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "stohniifooter": {
+                        "component": "Stohnii_SecondFooter/js/kosecond-footer"
+                    }
+                }
+            }
         }
     }
 </script>
