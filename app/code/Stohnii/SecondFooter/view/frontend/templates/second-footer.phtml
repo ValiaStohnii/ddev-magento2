@@ -8,8 +8,10 @@
                 <p class="game_modal_title">guessing game</p>
                 <p>You need to guess a randomly generated number from 1 to 50 by entering numbers into a box and clicking a button that reads "guess"</p>
                 <input class="game_modal_input" type="text">
-                <ul class="numbers-el" data-bind="foreach: numbers">
+                <ul class="numbers-el">
+                    <!-- ko foreach: numbers -->
                     <li class="number-el" data-bind="text: $data"></li>
+                    <!-- /ko -->
                 </ul>
                 <p class="message-el" data-bind="text: message"></p>
                 <button class="guess_button" type="button" data-bind="click: guessButton">Guess</button>
